@@ -140,16 +140,16 @@ export default function Question(props) {
 
                                         <div className='h-25 w-100'>
                                             <div className='d-flex mb-3 option'>
-                                                <button className={`text-start border-0 rounded-2 text-light h-50 w-50 ps-3 py-3 me-3 ${currAns === currentQuestion.options[0] ? ansClass : (ansClass === " wrong" && currentQuestion.correctAnswer === currentQuestion.options[0]) ? rghtans : ""} `} onClick={handleClick} >A. {currentQuestion.options[0]}</button>
-                                                <button className={`text-start border-0 rounded-2 text-light h-50 w-50 ps-3 py-3 ${currAns === currentQuestion.options[1] ? ansClass : (ansClass === " wrong" && currentQuestion.correctAnswer === currentQuestion.options[1]) ? rghtans : ""}`} onClick={handleClick}>B. {currentQuestion.options[1]}</button>
+                                                <button disabled={!disable} className={`text-start border-0 rounded-2 text-light h-50 w-50 ps-3 py-3 me-3 ${currAns === currentQuestion.options[0] ? ansClass : (ansClass === " wrong" && currentQuestion.correctAnswer === currentQuestion.options[0]) ? rghtans : ""} `} onClick={handleClick} >A. {currentQuestion.options[0]}</button>
+                                                <button disabled={!disable} className={`text-start border-0 rounded-2 text-light h-50 w-50 ps-3 py-3 ${currAns === currentQuestion.options[1] ? ansClass : (ansClass === " wrong" && currentQuestion.correctAnswer === currentQuestion.options[1]) ? rghtans : ""}`} onClick={handleClick}>B. {currentQuestion.options[1]}</button>
                                             </div>
                                             <div className='d-flex option'>
-                                                <button className={`text-start border-0 rounded-2 text-light h-50 w-50 ps-3 py-3 me-3 ${currAns === currentQuestion.options[2] ? ansClass : (ansClass === " wrong" && currentQuestion.correctAnswer === currentQuestion.options[2]) ? rghtans : ""}`} onClick={handleClick}>C. {currentQuestion.options[2]}</button>
-                                                <button className={`text-start border-0 rounded-2 text-light h-50 w-50 ps-3 py-3 ${currAns === currentQuestion.options[3] ? ansClass : (ansClass === " wrong" && currentQuestion.correctAnswer === currentQuestion.options[3]) ? rghtans : ""}`} onClick={handleClick}>D. {currentQuestion.options[3]}</button>
+                                                <button disabled={!disable} className={`text-start border-0 rounded-2 text-light h-50 w-50 ps-3 py-3 me-3 ${currAns === currentQuestion.options[2] ? ansClass : (ansClass === " wrong" && currentQuestion.correctAnswer === currentQuestion.options[2]) ? rghtans : ""}`} onClick={handleClick}>C. {currentQuestion.options[2]}</button>
+                                                <button disabled={!disable} className={`text-start border-0 rounded-2 text-light h-50 w-50 ps-3 py-3 ${currAns === currentQuestion.options[3] ? ansClass : (ansClass === " wrong" && currentQuestion.correctAnswer === currentQuestion.options[3]) ? rghtans : ""}`} onClick={handleClick}>D. {currentQuestion.options[3]}</button>
                                             </div>
 
                                             <div className={`w-100 ${disable ? "d-none" : ""}`}>
-                                                <button className='btn py-2 mt-3 float-end' id='next' style={{ background: "#38b000" }} onClick={handleNext}><p className='w-100 mb-0 text-center fw-semibold'>Next Question</p></button>
+                                                <button className='btn py-2 mt-3 float-end' id='next' style={{ background: "#38b000" }} onClick={handleNext}><p className='w-100 mb-0 text-center'>Next Question</p></button>
                                             </div>
                                         </div>
                                     </>
